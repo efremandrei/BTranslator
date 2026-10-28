@@ -22,6 +22,10 @@ Size: **82,372 bytes**. SHA-256: `B2BD32183CFC31C5B1612B0E2301AE7BBCC8B6556CBDAD
 
 The debug target Activity and emulator mouse helper are not included in the release APK. The helper requires an emulator shell only for testing; the phone app requires neither root nor ADB.
 
+## Delivery verification
+
+The GitHub v1.0.0 release asset was downloaded again and its SHA-256 matched the tested APK. The matching copy was confirmed by Drive metadata under `MyGit/BTranslator` (file ID `1Vk9Ydau1N-PU50GBW8XPI-oMDtc8yoV7`, 82,372 bytes).
+
 ## Limits
 
 No physical Samsung or CheerPlay was available. Real Bluetooth pairing, the exact signals / modes of the user's unit, pointer-edge behavior, and target apps on that phone remain unverified. The in-app source list, Detect my remote, live motion deltas, delivered/cancelled counts, and real-touch test pad support that check.
