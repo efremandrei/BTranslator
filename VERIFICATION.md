@@ -2,6 +2,8 @@
 
 Artifact: `BTranslator-v1.0.0-build-1-universal.apk`
 
+Size: **82,372 bytes**. SHA-256: `B2BD32183CFC31C5B1612B0E2301AE7BBCC8B6556CBDADF67AAEB123208B0DAA`.
+
 - Package: `com.efremandrei.btranslator`.
 - Minimum Android 14 / API 34; target and compile SDK 35.
 - Universal Java/web APK with no native libraries; compatible with Samsung ARM64 devices running Android 14 or newer.
@@ -16,6 +18,7 @@ Artifact: `BTranslator-v1.0.0-build-1-universal.apk`
 - The same emulator suite verified that the production WebView **Send left/right swipe** buttons reach the actual HTML touch handler through the native bridge and Android gesture dispatcher. It also verified the Pause receiver and screen-off pausing / restoration of pointer input. Original accessibility settings were restored afterward.
 - After startup-only changes, the production WebView / real-touch integration test was rerun and passed.
 - The APK installed on the emulator. Its packaged custom icon was displayed in Android App info. Native branded startup and the usable interface were inspected. Dark-first / saved-light theme behavior is implemented, including persisting the native splash theme.
+- Final cold-start recordings verified both dark and saved-light native splash themes. The native splash remains above initialization until the WebView's visual state and rendered frame are ready; it transitions to the usable interface without an app-added timer.
 
 The debug target Activity and emulator mouse helper are not included in the release APK. The helper requires an emulator shell only for testing; the phone app requires neither root nor ADB.
 
