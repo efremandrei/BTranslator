@@ -1,0 +1,5 @@
+<resources>
+    <string name="service_label">BTranslator · Remote swipes</string>
+    <string name="service_summary">Convert a remote’s pointer movements into touch swipes.</string>
+    <string name="service_description">When you start translation, BTranslator intercepts mouse and touchpad motion, recognizes left/right strokes from your selected input device, and sends touchscreen swipes. Other mouse and touchpad input is consumed while active. Finger touch remains available. Stop from the app, notification, or Quick Settings tile. BTranslator does not read screen text, take screenshots, or scan Bluetooth devices. Translation starts paused and pauses on disconnect, screen off, or service restart.</string>
+</resources>
