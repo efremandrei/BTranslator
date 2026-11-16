@@ -88,6 +88,7 @@ public final class MainActivity extends Activity {
         @JavascriptInterface public void appInfo(){runOnUiThread(()->startActivity(new Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,Uri.parse("package:"+getPackageName()))));}
         @JavascriptInterface public void notifications(){runOnUiThread(()->requestPermissions(new String[]{Manifest.permission.POST_NOTIFICATIONS},8));}
         @JavascriptInterface public void repository(){runOnUiThread(()->{try{startActivity(new Intent(Intent.ACTION_VIEW,Uri.parse("https://github.com/efremandrei/BTranslator")));}catch(android.content.ActivityNotFoundException ignored){}});}
+        @JavascriptInterface public void email(){runOnUiThread(()->{try{startActivity(new Intent(Intent.ACTION_SENDTO,Uri.parse("mailto:andrei.efr@gmail.com")));}catch(android.content.ActivityNotFoundException ignored){}});}
         @JavascriptInterface public void testSwipe(String direction,double left,double top,double width,double height,double viewportWidth){
             runOnUiThread(()->{
                 TranslatorService s=TranslatorService.current;if(s==null){Toast.makeText(MainActivity.this,"Enable the accessibility service to send a test swipe",Toast.LENGTH_LONG).show();return;}
